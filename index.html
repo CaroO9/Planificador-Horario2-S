@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificador de horario 2°Semestre (versión del PDF) </title>
+    <title>Planificador de horario 3°Semestre (versión del PDF) </title>
     <style>
         :root {
             --teoria: #4e79a7;
@@ -384,876 +384,1066 @@
     <script>
 const horariosData = [
  {
-   "nrc": 3508,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "MARTES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "María Moran",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3508,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "JUEVES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "María Moran",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3509,
-   "nombre_curso": "Calculo diferencial",
+   "nrc": 11954,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
    "dia": "LUNES",
    "hora_inicio": "8:00:00",
    "hora_fin": "9:20:00",
-   "profesor": "Esteban Flores",
-   "tipo": "Teoría"
+   "profesor": "Aejandro Godoy",
+   "tipo": "Teoría",
  },
  {
-   "nrc": 3509,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "JUEVES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Esteban Flores",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3510,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "LUNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3510,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "JUEVES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3511,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "MARTES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "María Moran",
-   "tipo": "Taller"
- },
- {
-   "nrc": 3512,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Esteban Flores",
-   "tipo": "Taller"
- },
- {
-   "nrc": 3513,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "María Moran",
-   "tipo": "Taller"
- },
- {
-   "nrc": 3514,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "VIERNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Esteban Flores",
-   "tipo": "Taller"
- },
- {
-   "nrc": 3515,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "VIERNES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Esteban Flores",
-   "tipo": "Taller"
- },
- {
-   "nrc": 3516,
-   "nombre_curso": "Bioestadística",
-   "dia": "JUEVES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Juan Curihuentro",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3516,
-   "nombre_curso": "Bioestadística",
-   "dia": "LUNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Juan Curihuentro",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3517,
-   "nombre_curso": "Bioestadística",
-   "dia": "LUNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3517,
-   "nombre_curso": "Bioestadística",
-   "dia": "JUEVES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3518,
-   "nombre_curso": "Bioestadística",
-   "dia": "MARTES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Javier Olivares",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 3519,
-   "nombre_curso": "Bioestadística",
-   "dia": "VIERNES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 3520,
-   "nombre_curso": "Bioestadística",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Juan Curihuentro",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 3521,
-   "nombre_curso": "Bioestadística",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Juan Curihuentro",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 3522,
-   "nombre_curso": "Bioestadística",
-   "dia": "VIERNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 3523,
-   "nombre_curso": "Física",
-   "dia": "JUEVES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3523,
-   "nombre_curso": "Física",
-   "dia": "LUNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 3524,
-   "nombre_curso": "Física",
+   "nrc": 11955,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
    "dia": "LUNES",
    "hora_inicio": "8:00:00",
    "hora_fin": "9:20:00",
-   "profesor": "Javier Silva",
-   "tipo": "Teoría"
+   "profesor": "Felipe Olave",
+   "tipo": "Teoría",
  },
  {
-   "nrc": 3524,
-   "nombre_curso": "Física",
-   "dia": "JUEVES",
+   "nrc": 16541,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "LUNES",
    "hora_inicio": "9:30:00",
    "hora_fin": "10:50:00",
-   "profesor": "Javier Silva",
-   "tipo": "Teoría"
+   "profesor": "Verónica Torres",
+   "tipo": "Teoría",
+
  },
  {
-   "nrc": 3525,
-   "nombre_curso": "Física",
+   "nrc": 16542,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
    "dia": "LUNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Teoría"
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Felipe Olave",
+   "tipo": "Teoría",
  },
  {
-   "nrc": 3525,
-   "nombre_curso": "Física",
+   "nrc": 16541,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA ",
+   "dia": "MARTES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Verónica Torres",
+   "tipo": "Teoría,
+ },
+ {
+   "nrc": 16542,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA ",
+   "dia": "MARTES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Felipe Olave",
+   "tipo": "Teoría,
+ },
+ {
+   "nrc": 11954,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "MARTES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Alejandro Godoy",
+   "tipo": "Teoría",
+ },
+ {
+   "nrc": 11955,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "MARTES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Felipe Olave",
+   "tipo": "Teoría",
+ },
+ {
+   "nrc": 11958,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "LUNES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Álvaro Álvarez",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 11960,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Verónica Torres",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 11957,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "LUNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Verónica Torres",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 16544,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA",
+   "dia": "MARTES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Yasna Varetto",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 11959,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA ",
+   "dia": "VIERNES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Álvaro Álvarez",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 16543,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA ",
+   "dia": "VIERNES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Mauricio Reyes",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 16545,
+   "nombre_curso": "FISIOLOGÍA INTEGRADA ",
+   "dia": "VIERNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Mauricio Reyes",
+   "tipo": "Taller",
+ },
+ {
+   "nrc": 16629,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Matías Chavez Cornejo",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16630,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Catalina Brieba Melo",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16631,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Franco Fernández Guardiola",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16636,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Amanda Fredes Ziliani",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16637,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Catalina Brieba Melo",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16638,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Franco Fernández Guardiola",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16639,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Franco Fernández Guardiola",
+   "tipo": "Taller"
+
+ },
+ {
+   "nrc": 16640,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Catalina Brieba Melo",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16641,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Amanda Fredes Ziliani",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16645,
+   "nombre_curso": "SALUD POBLACIONAL",
    "dia": "JUEVES",
    "hora_inicio": "11:00:00",
    "hora_fin": "12:20:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Teoría"
+   "profesor": "Catalina Brieba Melo",
+   "tipo": "Taller
  },
  {
-   "nrc": 3526,
-   "nombre_curso": "Física",
+   "nrc": 16646,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Elizabeth Gonzalez",
+   "tipo": "Taller
+ },
+ {
+   "nrc": 16635,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Amanda Fredes",
+   "tipo": "Taller
+ },
+ {
+   "nrc": 16642,
+   "nombre_curso": "SALUD POBLACIONAL",
    "dia": "VIERNES",
    "hora_inicio": "12:30:00",
    "hora_fin": "13:50:00",
-   "profesor": "Marcelo Galvez",
+   "profesor": "Franco Fernández Guardiola",
    "tipo": "Taller"
  },
  {
-   "nrc": 3527,
-   "nombre_curso": "Física",
-   "dia": "MIÉRCOLES",
+   "nrc": 16643,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "VIERNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Franco Fernández Guardiola",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 16617,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Sergio Rojas Garrido",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 16618,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Jean Gajardo Jauregui",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 16619,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Cristian Lisboa Donoso",
+   "tipo": "Teoría",
+ },
+ {
+   "nrc": 16617,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Sergio Rojas Garrido",
+   "tipo": "Teoría",
+ },
+ {
+   "nrc": 16618,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Jean Gajardo Jauregui",
+   "tipo": "Teoría", },
+ {
+   "nrc": 16619,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Cristian Lisboa Donoso",
+   "tipo": "Teoría",
+ },
+ {
+   "nrc": 16620,
+   "nombre_curso": "SALUD POBLACIONAL ",
+   "dia": "JUEVES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Sergio Rojas Garrido",
+   "tipo": "Teoria"
+ },
+ {
+   "nrc": 16622,
+   "nombre_curso": "SALUD POBLACIONAL ",
+   "dia": "JUEVES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Jean Gajardo Jauregui",
+   "tipo": "Teoria" },
+ {
+   "nrc": 16623,
+   "nombre_curso": "SALUD POBLACIONAL ",
+   "dia": "JUEVES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Carolina Moraga Paredes",
+   "tipo": "Teoria"
+ },
+ {
+   "nrc": 16620,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Sergio Rojas Garrido",
+   "tipo": "Teoria"
+ },
+ {
+   "nrc": 16622,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Jean Gajardo Jauregui",
+   "tipo": "Teoria",
+ },
+ {
+   "nrc": 16623,
+   "nombre_curso": "SALUD POBLACIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Carolina Moraga Paredes",
+   "tipo": "Teoria",
+ },
+ {
+   "nrc": 18030,
+   "nombre_curso": "AUTOCONFIAZA Y COMUNICACIÓN EFECTIVA",
+   "dia": "LUNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18035,
+   "nombre_curso": "AUTOCONOCIMIENTO Y LIDERAZGO",
+   "dia": "LUNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18037,
+   "nombre_curso": "AUTOCONFIAZA Y GESTIÓN EMOCIONAL",
+   "dia": "MARTES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18033,
+   "nombre_curso": "AUTOCONFIAZA Y COMUNICACIÓN E",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:00:00",
+   "hora_fin": "16:00:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18039,
+   "nombre_curso": "AUTOCONFIAZA Y GESTIÓN EMOCIONAL",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18036,
+   "nombre_curso": "AUTOCONOCIMIENTO Y LIDERAZGO",
+   "dia": "MIERCOLES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18030,
+   "nombre_curso": "AUTOCONFIAZA Y COMUNICACIÓN",
+   "dia": "JUEVES",
    "hora_inicio": "11:00:00",
    "hora_fin": "12:20:00",
-   "profesor": "Javier Silva",
+   "profesor": "a definir",
    "tipo": "Taller"
  },
  {
-   "nrc": 3528,
-   "nombre_curso": "Física",
+   "nrc": 18035,
+   "nombre_curso": "AUTOCONOCIMIENTO Y LIDERAZGO",
+   "dia": "JUEVES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "a definir",
+   "tipo": "Taller" },
+ {
+   "nrc": 18037,
+   "nombre_curso": "AUTOCONFIAZA Y GESTIÓN EMOCIONAL",
+   "dia": "JUEVES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18033,
+   "nombre_curso": "AUTOCONFIAZA Y COMUNICACIÓN",
+   "dia": "VIERNES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "a definir",
+   "tipo": "Taller"
+ },
+ {
+   "nrc": 18036,
+   "nombre_curso": "AUTOCONOCIMIENTO Y LIDERAZGO",
    "dia": "VIERNES",
    "hora_inicio": "9:30:00",
    "hora_fin": "10:50:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Taller"
+   "profesor": "a definir",
+   "tipo": "taller"
  },
  {
-   "nrc": 3529,
-   "nombre_curso": "Física",
-   "dia": "MARTES",
+   "nrc": 18039,
+   "nombre_curso": "AUTOCONFIAZA Y GESTIÓN EMOCIONAL",
+   "dia": "VIERNES",
    "hora_inicio": "11:00:00",
    "hora_fin": "12:20:00",
-   "profesor": "Javier Silva",
-   "tipo": "Taller"
+   "profesor": "a definir",
+   "tipo": "taller"
  },
  {
-   "nrc": 3530,
-   "nombre_curso": "Física",
-   "dia": "MARTES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Marcelo Galvez",
-   "tipo": "Taller"
- },
- {
-   "nrc": 4173,
-   "nombre_curso": "Física",
+   "nrc": 12720,
+   "nombre_curso": "QCA. ORGÁNICA",
    "dia": "LUNES",
-   "hora_inicio": "17:30:00",
-   "hora_fin": "18:50:00",
-   "profesor": "Javier Silva",
-   "tipo": "Taller"
- },
- {
-   "nrc": 6255,
-   "nombre_curso": "Calculo diferencial",
-   "dia": "VIERNES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Victoria Miranda",
-   "tipo": "Taller"
- },
- {
-   "nrc": 6270,
-   "nombre_curso": "Bioestadística",
-   "dia": "MARTES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Javier Olivas",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Carolina Olea",
    "tipo": "Laboratorio"
  },
  {
-   "nrc": 6937,
-   "nombre_curso": "QUÍMICA GENERAL II",
+   "nrc": 12722,
+   "nombre_curso": "QCA. ORGÁNICA",
    "dia": "LUNES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Carolina Olea",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16525,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Mitchell Bacho",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16526,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Mitchell Bacho",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12720,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Carolina Olea",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12722,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Carolina Olea",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16525,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Mitchell Bacho",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16526,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "LUNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Mitchell Bacho",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12723,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12724,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12723,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12724,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12726,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "VIERNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12726,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "VIERNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12727,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "VIERNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12727,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "VIERNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Paul Silve",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12715,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MARTES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Carlos Escobar",
+   "tipo": "teorico"
+ },
+ {
+   "nrc": 12716,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MARTES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Carolina Olea",
+   "tipo": "teorico",
+},
+{
+   "nrc": 12717,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MARTES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Paul Silva",
+   "tipo": "teorico"
+
+ },
+ {
+   "nrc": 12715,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Carlos Escobar",
+   "tipo": "teorico"
+ },
+ {
+   "nrc": 12716,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Carolina Olea",
+   "tipo": "teorico",
+},
+{
+   "nrc": 12717,
+   "nombre_curso": "QCA. ORGÁNICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Paul Silva",
+   "tipo": "teorico"
+ },
+ {
+   "nrc":12549 ,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Paulina Godoy",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc":12550 ,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT",
+   "dia": "LUNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Maria Paz Oyarzún",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc":12549 ,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT",
+   "dia": "LUNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Paulina Godoy",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc":12550 ,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT",
+   "dia": "LUNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Maria Paz Oyarzún",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16512,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "LUNES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Alejandra Molina",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16512,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "LUNES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Alejandra Molina",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16513,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "MARTES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16513,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "MARTES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12548,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12548,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12551,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16511,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Anita Cataldo",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12551,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Gabriela Maturana",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 16511,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "VIERNES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Anita Cataldo",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12541,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "MARTES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
    "profesor": "Juan Carlos Santos",
    "tipo": "Teoría"
  },
  {
-   "nrc": 6937,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
+   "nrc": 12542,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "MARTES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Paulina Godoy",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 16510,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "MARTES",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Loreto Villacura",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 12541,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "JUEVES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
    "profesor": "Juan Carlos Santos",
    "tipo": "Teoría"
  },
  {
-   "nrc": 6938,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
+   "nrc": 12542,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "JUEVES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
    "profesor": "Paulina Godoy",
    "tipo": "Teoría"
  },
  {
-   "nrc": 6938,
-   "nombre_curso": "QUÍMICA GENERAL II",
+   "nrc": 16510,
+   "nombre_curso": "QCA. ANALÍTICA CUALI-CUANT ",
+   "dia": "JUEVES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "13:50:00",
+   "profesor": "Loreto Villacura",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 12738,
+   "nombre_curso": "FISICOQUÍMICA",
    "dia": "MARTES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Paulina Godoy",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "14:50:00",
+   "profesor": "Juan Carlos Santos",
    "tipo": "Teoría"
  },
  {
-   "nrc": 6941,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Patricia Perez",
-   "tipo": "Taller"
+   "nrc": 12739,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "14:50:00",
+   "profesor": "Patricia Pérez",
+   "tipo": "Teoría"
  },
  {
-   "nrc": 6942,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
+   "nrc": 12740,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "12:30:00",
+   "hora_fin": "14:50:00",
    "profesor": "Eduardo Chamorro",
-   "tipo": "Taller"
- },
- {
-   "nrc": 6943,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Patricia Perez",
-   "tipo": "Taller"
- },
- {
-   "nrc": 6944,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Valeria Gazzano",
-   "tipo": "Taller"
- },
- {
-   "nrc": 6948,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Raúl Moscoso",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6948,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Raúl Moscoso",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6949,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Paulina Godoy",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6949,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Paulina Godoy",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6950,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Betzabé Acevedo",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6950,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Betzabé Acevedo",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6951,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6951,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6971,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Christian Onfray",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 6971,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Christian Onfray",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 7994,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 7995,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8003,
-   "nombre_curso": "ÉTICA",
-   "dia": "LUNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Rodrigo Illarraga",
    "tipo": "Teoría"
  },
  {
-   "nrc": 8003,
-   "nombre_curso": "ÉTICA",
+   "nrc": 12742,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Germán Barriga",
+   "tipo": "Laboratorio",
+ },
+ {
+   "nrc": 12743,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Germán Barriga",
+   "tipo": "Laboratorio",
+ },
+ {
+   "nrc": 12744,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "María Paz Oyarzún",
+   "tipo": "Laboratorio",
+ },
+ {
+   "nrc": 12745,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "María Paz Oyarzún",
+   "tipo": "Laboratorio",
+ },
+ {
+   "nrc": 12742,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "Germán Barriga",
+   "tipo": "Laboratorio",
+ },
+ {
+   "nrc": 12743,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "Germán Barriga",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12744,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "María Paz Oyarzún",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12745,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MARTES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "María Paz Oyarzún",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 13527,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "VIERNES",
+   "hora_inicio": "8:00:00",
+   "hora_fin": "9:20:00",
+   "profesor": "a definir",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 13527,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "VIERNES",
+   "hora_inicio": "9:30:00",
+   "hora_fin": "10:50:00",
+   "profesor": "a definir",
+   "tipo": "Laboratorio"
+ },
+ {
+   "nrc": 12738,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Juan Carlos Santos",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 12739,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Patricia Pérez",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 12740,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "MIERCOLES",
+   "hora_inicio": "11:00:00",
+   "hora_fin": "12:20:00",
+   "profesor": "Eduardo Chamorro",
+   "tipo": "Teoría"
+ },
+ {
+   "nrc": 12738,
+   "nombre_curso": "FISICOQUÍMICA",
    "dia": "JUEVES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Rodrigo Illarraga",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Juan Carlos Santos",
    "tipo": "Teoría"
  },
  {
-   "nrc": 8004,
-   "nombre_curso": "ÉTICA",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Miguel Cid",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 8004,
-   "nombre_curso": "ÉTICA",
-   "dia": "MARTES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Miguel Cid",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 8005,
-   "nombre_curso": "ÉTICA",
-   "dia": "MARTES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Pablo Follegati",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 8005,
-   "nombre_curso": "ÉTICA",
+   "nrc": 12739,
+   "nombre_curso": "FISICOQUÍMICA",
    "dia": "JUEVES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Pablo Follegati",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Patricia Pérez",
    "tipo": "Teoría"
  },
  {
-   "nrc": 8604,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8631,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8634,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8635,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8636,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "17:30:00",
-   "hora_fin": "18:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8637,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "19:00:00",
-   "hora_fin": "20:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8638,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8639,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8640,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8641,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8642,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 8975,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Fabian Capdeville",
-   "tipo": "Taller"
- },
- {
-   "nrc": 8976,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Fabian Capdeville",
-   "tipo": "Taller"
- },
- {
-   "nrc": 8977,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MARTES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Fabian Capdeville",
-   "tipo": "Taller"
- },
- {
-   "nrc": 8978,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Daniel Rojas",
-   "tipo": "Taller"
- },
- {
-   "nrc": 15627,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15628,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "17:30:00",
-   "hora_fin": "18:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15629,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "19:00:00",
-   "hora_fin": "20:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación "
- },
- {
-   "nrc": 15630,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15631,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15632,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15633,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15635,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Marcela Pezanni",
-   "tipo": "Taller"
- },
- {
-   "nrc": 15674,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "A definir",
-   "tipo": "Simulación"
- },
- {
-   "nrc": 15676,
-   "nombre_curso": "FUNDAMENTOS DEL QUEHACER FARMACÉUTICO",
-   "dia": "VIERNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Juan Andrades",
-   "tipo": "Taller"
- },
- {
-   "nrc": 16092,
-   "nombre_curso": "Bioestadística",
-   "dia": "MARTES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Javier Olivas",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 16096,
-   "nombre_curso": "Bioestadística",
-   "dia": "VIERNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Victorina Miranda",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 16139,
-   "nombre_curso": "Bioestadística",
-   "dia": "VIERNES",
-   "hora_inicio": "14:30:00",
-   "hora_fin": "15:50:00",
-   "profesor": "Javier Olivas",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 16139,
-   "nombre_curso": "Bioestadística",
+   "nrc": 12740,
+   "nombre_curso": "FISICOQUÍMICA",
    "dia": "JUEVES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Javier Olivas",
+   "hora_inicio": "14:40:00",
+   "hora_fin": "16:00:00",
+   "profesor": "Eduardo Chamorro",
    "tipo": "Teoría"
  },
  {
-   "nrc": 17776,
-   "nombre_curso": "QUÍMICA GENERAL II",
+   "nrc": 12746,
+   "nombre_curso": "FISICOQUÍMICA",
    "dia": "JUEVES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 17776,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "16:00:00",
-   "hora_fin": "17:20:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Teoría"
- },
- {
-   "nrc": 17780,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "17:30:00",
-   "hora_fin": "18:50:00",
-   "profesor": "Patricia Perez",
-   "tipo": "Taller"
- },
- {
-   "nrc": 17784,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "11:00:00",
-   "hora_fin": "12:20:00",
-   "profesor": "Silvana Salinas",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Andrés Ochoa",
    "tipo": "Laboratorio"
  },
  {
-   "nrc": 17784,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "LUNES",
-   "hora_inicio": "12:30:00",
-   "hora_fin": "13:50:00",
-   "profesor": "Silvana Salinas",
+   "nrc": 12747,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "JUEVES",
+   "hora_inicio": "16:10:00",
+   "hora_fin": "17:30:00",
+   "profesor": "Andrés Ochoa",
+   "tipo": "Laboratorio"
+
+ },
+ {
+   "nrc": 12746,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "JUEVES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "Andrés Ochoa",
    "tipo": "Laboratorio"
  },
  {
-   "nrc": 18571,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 18571,
-   "nombre_curso": "QUÍMICA GENERAL II",
-   "dia": "VIERNES",
-   "hora_inicio": "9:30:00",
-   "hora_fin": "10:50:00",
-   "profesor": "Silvana Salinas",
-   "tipo": "Laboratorio"
- },
- {
-   "nrc": 18597,
-   "nombre_curso": "Bioestadística",
-   "dia": "MIÉRCOLES",
-   "hora_inicio": "8:00:00",
-   "hora_fin": "9:20:00",
-   "profesor": "Victoria Miranda",
+   "nrc": 12747,
+   "nombre_curso": "FISICOQUÍMICA",
+   "dia": "JUEVES",
+   "hora_inicio": "17:35:00",
+   "hora_fin": "18:55:00",
+   "profesor": "Andrés Ochoa",
    "tipo": "Laboratorio"
  }
 ];
@@ -1614,3 +1804,4 @@ const horariosData = [
     </script>
 </body>
 </html>     
+
